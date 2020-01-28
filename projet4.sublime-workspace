@@ -1,0 +1,594 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"font",
+				"font-weight\tproperty"
+			],
+			[
+				"border-r",
+				"border-radius\tproperty"
+			],
+			[
+				"text",
+				"text-align\tproperty"
+			],
+			[
+				"inl",
+				"inline-block\tdisplay"
+			],
+			[
+				"background",
+				"background-color\tproperty"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "model/BddManager.php",
+			"settings":
+			{
+				"buffer_size": 467,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "model/CommentManager.php",
+			"settings":
+			{
+				"buffer_size": 810,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "model/PostManager.php",
+			"settings":
+			{
+				"buffer_size": 1509,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controller/Frontend.php",
+			"settings":
+			{
+				"buffer_size": 1150,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controller/abdate.php",
+			"settings":
+			{
+				"buffer_size": 260,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controller/ajouter.php",
+			"settings":
+			{
+				"buffer_size": 259,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 1162,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controller/supprimer.php",
+			"settings":
+			{
+				"buffer_size": 182,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/wamp/www/projet4",
+		"/D/wamp/www/projet4/controller",
+		"/D/wamp/www/projet4/model"
+	],
+	"file_history":
+	[
+		"/D/wamp/www/projet4/controller/modifier.php",
+		"/D/wamp/www/projet4/model/BddManager.php",
+		"/D/wamp/www/projet4/controller/frontend.php",
+		"/D/wamp/www/projet4/controller/supprimer.php",
+		"/D/wamp/www/projet4/view/backend/adminView.php",
+		"/D/wamp/www/projet4/view/backend/adminer.php",
+		"/D/wamp/www/projet4/controller/abdate.php",
+		"/D/wamp/www/projet4/controller/ajouter.php",
+		"/D/wamp/www/projet4/index.php",
+		"/D/wamp/www/projet4/view/frontend/listPostsView.php",
+		"/D/wamp/www/projet4/view/frontend/footer.php",
+		"/D/wamp/www/projet4/view/frontend/Auteur.php",
+		"/D/wamp/www/projet4/view/frontend/menu.php",
+		"/D/wamp/www/projet4/view/frontend/template.php",
+		"/D/wamp/www/projet4/public/css/pro04.css",
+		"/D/wamp/www/projet4/view/frontend/postView.php",
+		"/D/wamp/www/projet4/admin/.htpasswd",
+		"/D/wamp/www/projet4/admin/.htaccess",
+		"/D/wamp/www/projet4/admin/modifier.php",
+		"/D/wamp/www/projet4/admin/adminView.php",
+		"/C/Users/rbran/AppData/Local/Temp/Rar$DIa2436.23866/bootstrap.min.css",
+		"/D/wamp/www/projet4/admin/admin.htaccess",
+		"/D/wamp/www/projet4/admin/ajouter.php",
+		"/D/wamp/www/projet4/admin/supprimer.php",
+		"/D/wamp/www/projet4_essai/config/connect.php",
+		"/D/wamp/www/projet4_essai/config/functions.php",
+		"/D/wamp/www/projet4_essai/article.php",
+		"/D/wamp/www/projet4_essai/index.php",
+		"/C/Users/rbran/Desktop/projet04_essai/index.php",
+		"/C/Users/rbran/Desktop/projet04_essai/article.php",
+		"/C/Users/rbran/Desktop/projet04_essai/config/connect.php",
+		"/C/Users/rbran/Desktop/projet04_essai/config/functions.php",
+		"/D/wamp/www/projet4/view/frontend/admin.php",
+		"/D/wamp/www/projet4/post.php",
+		"/D/wamp/www/projetessai/projet.php",
+		"/C/Users/rbran/Desktop/projet03/projet3.css",
+		"/D/wamp/www/projet4/model/frontend.php",
+		"/D/wamp/www/projet4/view/frontend/Biographie.php",
+		"/D/wamp/www/projet4/view/frontend/indexView.php",
+		"/D/wamp/www/projet4/controller.php",
+		"/D/wamp/www/projet4/indexView.php",
+		"/D/wamp/www/projet4/menu.php",
+		"/D/wamp/www/projet4/model.php",
+		"/D/wamp/www/projet4/postView.php",
+		"/D/wamp/www/projet4/pro04.css",
+		"/D/wamp/www/projet4/affichage.php",
+		"/D/wamp/www/projet4/modele.php",
+		"/D/wamp/www/projet4/requete.php",
+		"/D/wamp/www/projet4/pro04.php",
+		"/C/Users/rbran/Desktop/projet 3 essai/pro.css",
+		"/C/Users/rbran/Desktop/projet 3 essai/pro.js",
+		"/C/Users/rbran/Desktop/projet 3 essai/slide.js",
+		"/C/Users/rbran/Desktop/projet 3 essai/canvas.js",
+		"/C/Users/rbran/Desktop/projet 3 essai/storage.js",
+		"/C/Users/rbran/Desktop/projet 3 essai/main.js",
+		"/C/Users/rbran/Desktop/carte (1).js",
+		"/C/Users/rbran/Desktop/map.js",
+		"/C/Users/rbran/Desktop/map (1).js",
+		"/C/Users/rbran/Desktop/projet03corre/projet03/main.js",
+		"/C/Users/rbran/Desktop/projet03corre/projet03/map.js",
+		"/C/Users/rbran/Desktop/projet03corre/projet03/requette.js",
+		"/C/Users/rbran/Desktop/projet 3 essai/pro.html",
+		"/C/Users/rbran/Desktop/projet03/test.js",
+		"/C/Users/rbran/Desktop/projet 3 essai/canvas.css",
+		"/C/Users/rbran/Desktop/Nouveau dossier/carousel.css",
+		"/C/Users/rbran/Desktop/Nouveau dossier/carousel.html",
+		"/C/Users/rbran/Desktop/Nouveau dossier/carouselJS.js",
+		"/C/Users/rbran/Desktop/Nouveau dossier/SliderTest.js",
+		"/C/Users/rbran/AppData/Local/Temp/Rar$DIa6344.9957/base-de-donnée-projet02.sql",
+		"/C/Users/rbran/Desktop/dup-installer/dup-database__8e3949f-18204955.sql",
+		"/C/Users/rbran/AppData/Local/Temp/Rar$DIa5244.12487/base-de-donnée-projet02.sql",
+		"/C/Users/rbran/Desktop/projet03/projet3.js",
+		"/C/Users/rbran/Desktop/projet03/projet3.html",
+		"/C/Users/rbran/Desktop/projet03-photo/projet3.html",
+		"/C/Users/rbran/Desktop/Projet1/style.css",
+		"/C/Users/rbran/AppData/Local/Temp/Rar$EXa3764.14445/webagency/projet1.html",
+		"/C/Users/rbran/Desktop/db797629685 (2).sql",
+		"/C/Users/rbran/Desktop/dbs187427.sql",
+		"/C/Users/rbran/AppData/Local/Temp/fz3temp-2/style.css",
+		"/C/Users/rbran/AppData/Local/Temp/fz3temp-3/style.min.css",
+		"/C/Users/rbran/AppData/Local/Temp/fz3temp-3/style.css",
+		"/C/Users/rbran/AppData/Local/Temp/fz3temp-3/editor-style.css",
+		"/C/Users/rbran/AppData/Local/Temp/fz3temp-3/style 2.css",
+		"/C/Users/rbran/AppData/Local/Temp/fz3temp-3/style 3.css",
+		"/C/Users/rbran/Desktop/Projet1/webagency/projet1.html",
+		"/C/Users/rbran/Desktop/Projet1/webagency/projet1.css",
+		"/C/Users/rbran/Desktop/Projet1/fontawesome/css/font-awesome.min.css",
+		"/C/Users/rbran/Desktop/webagency/projet1.html",
+		"/C/Users/rbran/Desktop/webagency/projet1.css",
+		"/C/Users/rbran/Desktop/projet1/webagency/projet1.html",
+		"/C/Users/rbran/Desktop/projet1/webagency/projet1.css",
+		"/C/Users/rbran/AppData/Local/Temp/Rar$DIa11624.11713/projet1.css",
+		"/C/Users/rbran/Desktop/projet1/projet1.css",
+		"/C/Users/rbran/Desktop/projet1/projet1.html",
+		"/C/Users/rbran/Desktop/projet1/projet1/projet1.html",
+		"/C/Users/rbran/Desktop/projet1/projet1/projet1.css",
+		"/C/Users/rbran/AppData/Local/Temp/Temp1_projet1.zip/projet1/projet1.css",
+		"/C/Users/rbran/AppData/Local/Temp/Temp1_projet1.zip/projet1/projet1.html",
+		"/E/projet1/projet1.css",
+		"/E/projet1/projet1.html"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			">\n",
+			"noumea"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"ireki"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "model/BddManager.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								288,
+								288
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "model/CommentManager.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 810,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								557,
+								557
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 8.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "model/PostManager.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1509,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1320,
+								1320
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 288.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "controller/Frontend.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1150,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								665,
+								665
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "controller/abdate.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 260,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								257,
+								6
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "controller/ajouter.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 259,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								256,
+								6
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1162,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								391,
+								391
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "controller/supprimer.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 182,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9,
+								179
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 44.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "projet4.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 154.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

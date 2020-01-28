@@ -1,0 +1,55 @@
+body{
+	background-color: #DDD!important;
+}
+.bg{
+
+}
+.navbar-fixed-top{
+	color: red!important;
+  background-color: #C0C0C0;
+  position: fixed!important;
+  right: 0;
+  left: 0;
+  z-index: 1030!important;
+}
+h1, h2{
+	font-size: 0.5em;
+	text-align: center;
+	margin: auto;
+}
+.my-auto{
+	margin-top: 400px!important;
+}
+.col-md-6{
+	flex-direction: row;
+	display: flex;
+}
+.t3{
+	font-size: 20px!important;
+}
+.t4{
+	font-size: 25px!important;
+}
+.titre{
+    position: relative;
+    bottom: 400px;
+    color: #DCDCDC;
+}
+.image img{
+	width: 100%;
+	height: 650px;
+}
+.news{
+	text-align: center;
+	margin: auto;
+}
+.monBlock{
+	margin: auto;
+}
+.bio img{
+	width: 50%!important;
+	height: 100px!important;
+}
+.page-footer{
+	background-color: 	#C0C0C0!important;
+}
