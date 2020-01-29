@@ -3,7 +3,7 @@
 session_start();
 
 if (isset($_POST['password'])) { #si la variable mot de passe existe
-    if ($_POST['password'] == 'kongo') {
+    if ($_POST['password'] == '') {
         $_SESSION['connecte'] = true;
     }
     else {
