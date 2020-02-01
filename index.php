@@ -1,13 +1,16 @@
  <?php
 //
+
+
 ini_set('display_errors','on');
 error_reporting(E_ALL);
 
-
+ /*include_once('Autoloader.php');
+Autoloader::register();*/
 //le routeur
 require('controller/Frontend.php');
 require('controller/Backend.php');
-//if(isset($_GET['action']) { $action = $_GET['action'];} else { $action = "listPosts";}
+
 (isset($_GET['action'])) ? $action = $_GET['action'] : $action = "listPosts" ;
 //    condition         ? si true                   :    si false ;
 // ternaire (if en ternaire)
@@ -19,12 +22,29 @@ try
 		case 'listPosts':
 			$front->listPosts();
 			break;
-		case 'listAllPosts':
-			$back->listAllPosts();
-			break;
+		
 		case 'connect':
 			$back->connect();
 			break;
+		case 'login':
+		if(isset($_POST) AND !empty($_POST))
+		{
+			if (!empty(htmlspecialchars($_POST['username'])) && !empty(htmlspecialchars($_POST['password'])))
+					    {
+					    	$back->login($_POST['username'], sha1($_POST['password']));
+					    }else{
+					    	throw new Exception("remplissez les champs");
+					    	
+					    }
+		}
+		    
+			
+			break;
+        
+        case 'listAllPosts':
+			$back->listAllPosts();
+			break;
+
 		case 'post':
 			$front->post();
 			break;

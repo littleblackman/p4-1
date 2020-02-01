@@ -1,18 +1,45 @@
 <?php
 
+
+
 require_once 'model/PostManager.php';
 require_once 'model/CommentManager.php';
+require_once 'model/LoginManager.php';
+
 
 class Backend
 {  
- public function connect()
+    public function connect()
     {
-    	
-        require_once'view/backend/adminLoginView.php';
-		
+        require 'view/backend/adminLoginView.php';
     }
+
+    public function login($username, $password)
+    {
+
+        $loginManager = new LoginManager();
+        $login = $loginManager->getUser($username, $password);
+
+        if($login)
+        {
+            session_start();
+            $_SESSION['admin'] = $_POST['username'];
+                header('location: index.php?action=listAllPosts');
+    
+        }    
+            else
+            {
+            throw new Exception("ce n'est pas le bon mot de pass");
+            
+            }    
+    
+         
+
+    }
+
     public function listAllPosts() 
     {
+
         $manager = new PostManager();
         $allPosts = $manager->getAllPosts();
         require('view/backend/adminView.php');
@@ -34,7 +61,7 @@ class Backend
     {
         $manager = new PostManager();
         $newPosts = $manager->insertPost($_POST['title'], $_POST['content']);
-        //require('view/backend/insertView.php');
+        require('view/backend/insertView.php');
     }
 
     public function addComment($postId, $author, $comment)

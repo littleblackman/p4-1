@@ -4,6 +4,9 @@ body{
 .bg{
 
 }
+.admin{
+	margin-left: 20px;
+}
 .navbar-fixed-top{
 	color: red!important;
   background-color: #C0C0C0;
@@ -28,6 +31,7 @@ h1, h2{
 	font-size: 20px!important;
 }
 .t4{
+	margin-left: 20px;
 	font-size: 25px!important;
 }
 .titre{
@@ -40,8 +44,7 @@ h1, h2{
 	height: 650px;
 }
 .news{
-	text-align: center;
-	margin: auto;
+	margin-left: 20px;
 }
 .monBlock{
 	margin: auto;

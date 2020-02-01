@@ -23,5 +23,15 @@ abstract class BddManager
         $delt = $db->exec("DELETE FROM $table WHERE id = $id ");
         return $delt;
     }
+    public function setpass()
+    {
+        $pass_hache = password_hash('kahina', PASSWORD_DEFAULT);
+        $ret = $this->getBdd()->prepare('INSERT INTO users(pseudo, pass) VALUES(:pseudo, :pass');
+        $ret->execute(array(
+            'pseudo' => $pseudo,
+            'pass' => $pass_hache
+        ));
+        
+    }
    
 }

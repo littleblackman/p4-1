@@ -3,7 +3,7 @@
 <?php include 'menu.php'; ?>
 <p class="text-center text-success t4">Dérniers billets du blog </p>
 <?php while ($data = $posts->fetch(PDO::FETCH_ASSOC)) :?>
-   <div class='col-md-12 text-justify text-center'>
+   <div class='col-md-12  text-justify text-center'>
         <h3 class='t3'>
             <?= htmlspecialchars($data['title']) ?>
             <em><?= $data['creation_date_fr'] ?></em>

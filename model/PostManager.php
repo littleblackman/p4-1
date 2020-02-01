@@ -29,6 +29,7 @@ class PostManager extends BddManager
 
         return $post;
     }
+   
     public function updatePost($postId)
     {
         $apdt = $this->getBdd()->prepare("UPDATE posts SET 
