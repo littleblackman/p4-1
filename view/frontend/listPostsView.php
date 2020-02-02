@@ -1,6 +1,6 @@
 <?php $title = "Billets simple pour l'alaska"; ?>
 <?php ob_start(); ?>
-<?php include 'menu.php'; ?>
+<?php include 'header.php'; ?>
 <p class="text-center text-success t4">Dérniers billets du blog </p>
 <?php while ($data = $posts->fetch(PDO::FETCH_ASSOC)) :?>
    <div class='col-md-12  text-justify text-center'>

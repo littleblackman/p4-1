@@ -32,9 +32,6 @@ class Backend
             throw new Exception("ce n'est pas le bon mot de pass");
             
             }    
-    
-         
-
     }
 
     public function listAllPosts() 
@@ -52,16 +49,28 @@ class Backend
         
     }
 
+    public function update($id, $title, $content)
+    {
+        $manager = new PostManager();
+        $manager->updatePost($title, $content, $id);
+        require('view/backend/updateView.php');
+    }
+    
     public function creatPost()
     {
-        require('view/backend/insertView.php');
+        require('view/backend/creatView.php');
     }
 
     public function setPost($title, $content)
     {
         $manager = new PostManager();
-        $newPosts = $manager->insertPost($_POST['title'], $_POST['content']);
-        require('view/backend/insertView.php');
+        $newPost = $manager->insertPost($title, $content);
+         if ($newPost === false) {
+            throw new Exception('Impossible d\'ajouter l\'article !');
+        }
+        else {
+            header('Location: index.php?action=listAllPosts');
+        }
     }
 
     public function addComment($postId, $author, $comment)

@@ -30,28 +30,27 @@ class PostManager extends BddManager
         return $post;
     }
    
-    public function updatePost($postId)
+    public function updatePost($id, $title, $content)
     {
-        $apdt = $this->getBdd()->prepare("UPDATE posts SET 
-	        	id = :nvid, 
-	        	title = :nvtitle, 
-	        	content = :nvcontent, 
-	        	creation_date = :nvdate 
-            where id = :nvpostId");
-        $apdt->execute(array(
-            	'nvid' => $nvid, 
-	        	'nvtitle' => $nvtitle, 
-	        	'nvcontent' => $nvcontent, 
-	        	'nvdate' => $nvdate,
-	        	'nvpostId' => $nvpostId
-        ));
+        $apdt = $this->getBdd()->prepare("UPDATE posts SET  
+	        	title = :title, 
+	        	content = :content, 
+	        	creation_date = :creation_date 
+            WHERE id = :id");
+        $apdt->execute([
+            	'id' => $_GET['id'], 
+	        	'title' => $_POST['title'], 
+	        	'content' => $_POST['content'], 
+	        	'creation_date' => $_POST['creation_date'],
+	        	
+        ]);
         return $apdt;
     }
     public function insertPost($title, $content)
 	{
-			$insrt = $this->getBdd()->prepare('INSERT INTO posts(title, content, create_date) VALUES(?, ?, ?, NOW())');
-		    $insrt->execute(array($title, $content));
-		    return $insrt;
+			$insrt = $this->getBdd()->prepare('INSERT INTO posts(title, content, create_date) VALUES(?, ?, NOW())');
+		    $insrtArticle= $insrt->execute(array($title, $content));
+		    return $insrtArticle;
 	}
 
 

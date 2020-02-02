@@ -27,5 +27,12 @@ class Frontend{
             
        }
     }
+
+    public function auteur()
+    {
+
+        require('view/frontend/Auteur.php');
+    }
+     
      
 }

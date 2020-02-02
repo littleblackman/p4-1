@@ -31,7 +31,16 @@
 			"file": "model/BddManager.php",
 			"settings":
 			{
-				"buffer_size": 467,
+				"buffer_size": 787,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "model/LoginManager.php",
+			"settings":
+			{
+				"buffer_size": 431,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -40,7 +49,7 @@
 			"file": "model/CommentManager.php",
 			"settings":
 			{
-				"buffer_size": 810,
+				"buffer_size": 754,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -49,7 +58,7 @@
 			"file": "model/PostManager.php",
 			"settings":
 			{
-				"buffer_size": 1509,
+				"buffer_size": 1740,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -58,25 +67,88 @@
 			"file": "controller/Frontend.php",
 			"settings":
 			{
-				"buffer_size": 1150,
+				"buffer_size": 833,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "controller/abdate.php",
+			"file": "controller/Backend.php",
 			"settings":
 			{
-				"buffer_size": 260,
+				"buffer_size": 2376,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "controller/ajouter.php",
+			"file": "Autoloader.php",
 			"settings":
 			{
-				"buffer_size": 259,
+				"buffer_size": 553,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "view/backend/adminView.php",
+			"settings":
+			{
+				"buffer_size": 928,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/css/pro04.css",
+			"settings":
+			{
+				"buffer_size": 951,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "view/backend/creatView.php",
+			"settings":
+			{
+				"buffer_size": 471,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "view/backend/updatePost.php",
+			"settings":
+			{
+				"buffer_size": 184,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "view/backend/adminLoginView.php",
+			"settings":
+			{
+				"buffer_size": 256,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "view/frontend/postView.php",
+			"settings":
+			{
+				"buffer_size": 1422,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "view/frontend/listPostsView.php",
+			"settings":
+			{
+				"buffer_size": 707,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -85,16 +157,16 @@
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 1162,
+				"buffer_size": 2521,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "controller/supprimer.php",
+			"file": "view/frontend/Auteur.php",
 			"settings":
 			{
-				"buffer_size": 182,
+				"buffer_size": 2591,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -134,23 +206,31 @@
 	[
 		"/D/wamp/www/projet4",
 		"/D/wamp/www/projet4/controller",
-		"/D/wamp/www/projet4/model"
+		"/D/wamp/www/projet4/model",
+		"/D/wamp/www/projet4/public",
+		"/D/wamp/www/projet4/public/css",
+		"/D/wamp/www/projet4/view",
+		"/D/wamp/www/projet4/view/frontend"
 	],
 	"file_history":
 	[
+		"/D/wamp/www/projet4/view/frontend/menu.php",
+		"/D/wamp/www/projet4/view/frontend/modifierArticle.php",
+		"/D/wamp/www/projet4/controller/Autoloader.php",
+		"/D/wamp/www/projet4/controller/apdateView.php",
+		"/D/wamp/www/projet4/view/backend/adminView.php",
+		"/D/wamp/www/projet4/adminView.php",
+		"/D/wamp/www/projet4/controller/supprimer.php",
+		"/D/wamp/www/projet4/controller/abdate.php",
+		"/D/wamp/www/projet4/controller/ajouter.php",
 		"/D/wamp/www/projet4/controller/modifier.php",
 		"/D/wamp/www/projet4/model/BddManager.php",
 		"/D/wamp/www/projet4/controller/frontend.php",
-		"/D/wamp/www/projet4/controller/supprimer.php",
-		"/D/wamp/www/projet4/view/backend/adminView.php",
 		"/D/wamp/www/projet4/view/backend/adminer.php",
-		"/D/wamp/www/projet4/controller/abdate.php",
-		"/D/wamp/www/projet4/controller/ajouter.php",
 		"/D/wamp/www/projet4/index.php",
 		"/D/wamp/www/projet4/view/frontend/listPostsView.php",
 		"/D/wamp/www/projet4/view/frontend/footer.php",
 		"/D/wamp/www/projet4/view/frontend/Auteur.php",
-		"/D/wamp/www/projet4/view/frontend/menu.php",
 		"/D/wamp/www/projet4/view/frontend/template.php",
 		"/D/wamp/www/projet4/public/css/pro04.css",
 		"/D/wamp/www/projet4/view/frontend/postView.php",
@@ -275,7 +355,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 15,
 			"sheets":
 			[
 				{
@@ -284,15 +364,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 467,
+						"buffer_size": 787,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								288,
-								288
+								781,
+								781
 							]
 						],
 						"settings":
@@ -305,80 +385,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "model/CommentManager.php",
+					"file": "model/LoginManager.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 810,
+						"buffer_size": 431,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								557,
-								557
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 8.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "model/PostManager.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1509,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1320,
-								1320
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 288.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "controller/Frontend.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1150,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								665,
-								665
+								45,
+								45
 							]
 						],
 						"settings":
@@ -389,26 +413,147 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "model/CommentManager.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 754,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								85,
+								44
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 109.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "model/PostManager.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1740,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1668,
+								1668
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 960.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "controller/Frontend.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 833,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								806,
+								806
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 292.8,
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "controller/abdate.php",
+					"buffer": 5,
+					"file": "controller/Backend.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 260,
+						"buffer_size": 2376,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								257,
-								6
+								1266,
+								1266
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Autoloader.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 553,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								211,
+								211
 							]
 						],
 						"settings":
@@ -419,24 +564,198 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "controller/ajouter.php",
+					"buffer": 7,
+					"file": "view/backend/adminView.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 259,
+						"buffer_size": 928,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								256,
-								6
+								464,
+								464
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "public/css/pro04.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 951,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								711,
+								711
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 731.2,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "view/backend/creatView.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 471,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								411,
+								411
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "view/backend/updatePost.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 184,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								176,
+								176
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "view/backend/adminLoginView.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 256,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4,
+								4
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "view/frontend/postView.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1422,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								280,
+								280
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "view/frontend/listPostsView.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 707,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								251,
+								242
 							]
 						],
 						"settings":
@@ -451,20 +770,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 14,
 					"file": "index.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1162,
+						"buffer_size": 2521,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								391,
-								391
+								1156,
+								1156
 							]
 						],
 						"settings":
@@ -472,38 +791,40 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1561.2,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "controller/supprimer.php",
+					"buffer": 15,
+					"file": "view/frontend/Auteur.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 182,
+						"buffer_size": 2591,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9,
-								179
+								284,
+								284
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

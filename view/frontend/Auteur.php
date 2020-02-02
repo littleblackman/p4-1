@@ -1,9 +1,10 @@
 <?php $title = "Billets simple pour l'alaska"; ?>
 <?php ob_start(); ?>
-<?php include 'menu.php' ?>
+<?php include 'menu.php'; ?>
+<div class="biojean">
         <h1>Biographie</h1>
-        <div class="col-md-2 bio"><img src="https://pixabay.com/get/5fe5d7464f5ab10ff3d89938b977692b083edbe25a51724d74297e/brett-952558_640.jpg"></div>
-        <p>
+        <div class="bio text-center"><img src="https://cdn.pixabay.com/photo/2015/09/22/22/21/brett-952558_1280.jpg"></div>
+        <p class="col-sm-11 col-sm-push-3  text-justify biographie">
             Né le 19 février 1976 à Herblay, dans le Val-d’Oise, Maxime Chattam fait au cours de son enfance de fréquents séjours aux États-Unis, à New York, à Denver, et surtout à Portland (Oregon), qui devient le cadre de L’âme du mal. Il suit le Cours Simon à Paris en parallèle de ses études. Après le bac, petits boulots, Lettres Modernes à la fac.
 
             En 1999, Maxime écrit le 5° règne (qu’il ne soumet à aucun éditeur). Il devient libraire (avec un gilet vert) ce qui lui permet d’en savoir plus sur le monde de l’édition. Il s’inscrit également aux cours de criminologie dispensés par l’université Saint-Denis.
@@ -18,7 +19,7 @@
 
             Il se marie avec l’animatrice Faustine Bollaert en août 2012 et il est maintenant papa.
                     </p>
-        
+ </div>       
 <?php include 'footer.php'; ?>
 <?php $content = ob_get_clean(); ?>
 <?php require('template.php'); ?>

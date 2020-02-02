@@ -1,8 +1,12 @@
 <?php ob_start(); ?>
 <?php session_start() ?>
+<?php include('view/frontend/menu.php'); ?>
 <h2>Espace administration</h2>
 <h3 class="text-success admin">Bienvenue <?= $_SESSION['admin'] ?></h3>
-<p class="text-success t4">Dérniers billets du blog </p>
+<button>
+    <a href="index.php?action=creatPost ">ajouter un article</a>
+</button>
+<p class="text-success t4">Billets du blog </p>
  
 <?php
 while ($data = $allPosts->fetch())
@@ -14,7 +18,7 @@ while ($data = $allPosts->fetch())
         <em>le <?php echo $data['date_creation_fr']; ?></em>
     </h3>
     <button>
-    	<a href="index.php?action=apdate&amp;id=<?= $data['id'] ?>">modifier</a>
+    	<a href="index.php?action=update&amp;id=<?= $data['id'] ?>">modifier</a>
     
     </button>
     <button>
@@ -26,9 +30,7 @@ while ($data = $allPosts->fetch())
 $allPosts->closeCursor();
 ?>
 <br/>
-<button>
-	<a href="index.php?action=insertPost ">ajouter un article</a>
-</button>
+
 <?php include 'view/frontend/footer.php'; ?>
 <?php $content = ob_get_clean(); ?>
 <?php require 'view/frontend/template.php'; ?>

@@ -8,6 +8,8 @@
     </head>
         
     <body>
-        <?= $content ?>
+       <div class="site-content">
+       	<?= $content ?>
+       	</div>
     </body>
 </html>

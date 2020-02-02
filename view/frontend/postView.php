@@ -2,7 +2,7 @@
 <!--affichage d'un billet et ses commentaires--> 
 <?php $title = htmlspecialchars($post['title']); ?>
 <?php ob_start(); ?>
-<?php include 'menu.php' ?>
+<?php include 'header.php' ?>
         <p><a href="index.php">Retour à la liste des billets</a></p>
 <div class="news col-sm-9 col-sm-push-3  text-justify monBlock">
     <h3>

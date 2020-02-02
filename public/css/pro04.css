@@ -1,14 +1,42 @@
 body{
 	background-color: #DDD!important;
+	
+	overflow-x: visible;
+}
+html
+{
+   height: 100%;
 }
 .bg{
 
 }
+.site-content{
+	margin-top: 150px;
+	min-height: 100%!important;
+	
+}
+.page-footer{
+	position: absolute;
+	bottom:0px!important;
+	width:100%;
+	height: 150px;
+}
+.site-header
+{ height:100%!important;
+	
+}
 .admin{
 	margin-left: 20px;
+	/*padding-top: 200px;*/
 }
-.navbar-fixed-top{
-	color: red!important;
+.connectAdmin
+{
+	
+}
+
+.menu{
+	flex-direction: row!important;
+	top: 0px;
   background-color: #C0C0C0;
   position: fixed!important;
   right: 0;
@@ -22,10 +50,6 @@ h1, h2{
 }
 .my-auto{
 	margin-top: 400px!important;
-}
-.col-md-6{
-	flex-direction: row;
-	display: flex;
 }
 .t3{
 	font-size: 20px!important;
@@ -42,6 +66,7 @@ h1, h2{
 .image img{
 	width: 100%;
 	height: 650px;
+	margin-top: -50px;
 }
 .news{
 	margin-left: 20px;
@@ -49,9 +74,30 @@ h1, h2{
 .monBlock{
 	margin: auto;
 }
+.logo{
+	width: 150px;
+	float: left;
+	margin-top: -50px;
+}
 .bio img{
-	width: 50%!important;
-	height: 100px!important;
+	width: 70%;
+	height: auto;
+	border: 2px #C0C0C0 solid;
+	/*margin-top: 50px;*/
+}
+.biojean{
+	text-align: center;
+    margin: auto;
+    margin-bottom: 50px;
+    /*padding-top: 160px!important;*/
+}
+.biographie{
+    text-align: center;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    border: 2px #C0C0C0 solid;
+    padding: 10px;
 }
 .page-footer{
 	background-color: 	#C0C0C0!important;
