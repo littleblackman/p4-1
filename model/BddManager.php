@@ -1,9 +1,5 @@
 <?php
 
-/**
- * Connect to BDD
- *
- */
 abstract class BddManager
 {
     private $bdd;

@@ -1,7 +1,7 @@
 
 <?php $title = "Billets simple pour l'alaska"; ?>
 <?php ob_start(); ?>
-<?php include 'view/frontend/menu.php'; ?>
+<?php include (VIEW.'frontend/menu.php'); ?>
 <div class='admin'>
     <h3>Connection</h3>
     <p>Vous n'êtes pas connecté, veuillez taper le mot de passe</p>
@@ -11,7 +11,7 @@
     <input type="submit"/>
     </form>
 </div>
-<?php include 'view/frontend/footer.php'; ?>
+<?php include (VIEW.'frontend/footer.php'); ?>
 <?php $content = ob_get_clean(); ?>
 <?php require 'view/frontend/template.php'; ?>
 

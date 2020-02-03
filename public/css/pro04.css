@@ -1,33 +1,17 @@
 body{
 	background-color: #DDD!important;
-	
-	overflow-x: visible;
+	width: 100%;
 }
-html
-{
-   height: 100%;
-}
-.bg{
 
+.comment{
+   border: 1px solid #C0C0C0;
+   margin: 10px;
 }
-.site-content{
-	margin-top: 150px;
-	min-height: 100%!important;
-	
-}
-.page-footer{
-	position: absolute;
-	bottom:0px!important;
-	width:100%;
-	height: 150px;
-}
-.site-header
-{ height:100%!important;
-	
-}
+
+
 .admin{
 	margin-left: 20px;
-	/*padding-top: 200px;*/
+	padding: 200px;
 }
 .connectAdmin
 {
@@ -102,3 +86,5 @@ h1, h2{
 .page-footer{
 	background-color: 	#C0C0C0!important;
 }
+
+

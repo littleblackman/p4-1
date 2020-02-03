@@ -20,7 +20,7 @@
 while ($comment = $comments->fetch())
 {
 ?>
-   <div class='col-md-12 text-justify text-center'>
+   <div class='col-md-12 text-justify text-center comment'>
         <h3 class='t3'>
             <?= htmlspecialchars($comment['author']) ?>
             <em><?= $comment['comment_date_fr'] ?></em>

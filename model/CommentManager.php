@@ -1,10 +1,5 @@
 <?php
 
-
-/**
- * Comment CRUD request
- * 
- */
 class CommentManager extends BddManager
 {
 	public function postComment($postId, $author, $comment)

@@ -11,6 +11,6 @@
         <textarea placeholder="contenu" name="content">Contenu</textarea>
         <input type="submit" />
 </form>
-<?php include 'view/frontend/footer.php'; ?>
+<?php include ('view/frontend/footer.php'); ?>
 <?php $content = ob_get_clean(); ?>
 <?php require 'view/frontend/template.php'; ?>

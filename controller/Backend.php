@@ -1,7 +1,6 @@
 <?php
 
 
-
 require_once 'model/PostManager.php';
 require_once 'model/CommentManager.php';
 require_once 'model/LoginManager.php';
@@ -22,16 +21,17 @@ class Backend
 
         if($login)
         {
-            session_start();
+            
             $_SESSION['admin'] = $_POST['username'];
                 header('location: index.php?action=listAllPosts');
     
         }    
-            else
-            {
+        else
+        {
             throw new Exception("ce n'est pas le bon mot de pass");
             
-            }    
+        }    
+
     }
 
     public function listAllPosts() 

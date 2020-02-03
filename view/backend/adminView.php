@@ -1,6 +1,5 @@
 <?php ob_start(); ?>
-<?php session_start() ?>
-<?php include('view/frontend/menu.php'); ?>
+<?php include(VIEW.'frontend/menu.php'); ?>
 <h2>Espace administration</h2>
 <h3 class="text-success admin">Bienvenue <?= $_SESSION['admin'] ?></h3>
 <button>
@@ -31,6 +30,6 @@ $allPosts->closeCursor();
 ?>
 <br/>
 
-<?php include 'view/frontend/footer.php'; ?>
+<?php include (VIEW.'frontend/footer.php'); ?>
 <?php $content = ob_get_clean(); ?>
 <?php require 'view/frontend/template.php'; ?>
