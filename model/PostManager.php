@@ -1,6 +1,6 @@
 <?php
 
-require 'BddManager.php';
+//require 'BddManager.php';
 
 /**
  * Post CRUD request
@@ -30,27 +30,26 @@ class PostManager extends BddManager
         return $post;
     }
    
-    public function updatePost($id, $title, $content)
+    public function updatePost($title, $content)
     {
-        $apdt = $this->getBdd()->prepare("UPDATE posts SET  
-	        	title = :title, 
-	        	content = :content, 
-	        	creation_date = :creation_date 
-            WHERE id = :id");
-        $apdt->execute([
-            	'id' => $_GET['id'], 
-	        	'title' => $_POST['title'], 
-	        	'content' => $_POST['content'], 
-	        	'creation_date' => $_POST['creation_date'],
-	        	
-        ]);
-        return $apdt;
+
+        $request = $this->getBdd()->prepare("UPDATE posts SET  
+	        	title = ?, 
+	        	content = ?, 
+	        	date_modification = NOW() 
+            WHERE id = ?");
+
+        $request->execute($title, $content, $date_modification);
+        
+        return $request;
     }
     public function insertPost($title, $content)
 	{
-			$insrt = $this->getBdd()->prepare('INSERT INTO posts(title, content, create_date) VALUES(?, ?, NOW())');
-		    $insrtArticle= $insrt->execute(array($title, $content));
-		    return $insrtArticle;
+
+        $insert = $this->getBdd()->prepare('INSERT INTO posts(title, content, creation_date) VALUES(?, ?, NOW())');
+        $newPost = $insert->execute(array($title, $content));
+        
+            return $newPost;
 	}
 
 

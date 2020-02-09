@@ -1,16 +1,10 @@
 <?php
 
-
-require_once 'model/PostManager.php';
-require_once 'model/CommentManager.php';
-require_once 'model/LoginManager.php';
-
-
 class Backend
 {  
     public function connect()
     {
-        require 'view/backend/adminLoginView.php';
+        require (VIEW.'backend/adminLoginView.php');
     }
 
     public function login($username, $password)
@@ -23,24 +17,26 @@ class Backend
         {
             
             $_SESSION['admin'] = $_POST['username'];
-                header('location: index.php?action=listAllPosts');
-    
+            $manager = new PostManager();
+            $allPosts = $manager->getAllPosts();
+        
+        
+            require(VIEW.'backend/adminView.php');
         }    
         else
         {
-            throw new Exception("ce n'est pas le bon mot de pass");
+            throw new Exception("Le nom ou le mot de passe est incorect");
             
         }    
 
     }
 
-    public function listAllPosts() 
+    public function disconnect()
     {
+         session_destroy();
+         require (VIEW.'backend/adminLoginView.php');
+    }
 
-        $manager = new PostManager();
-        $allPosts = $manager->getAllPosts();
-        require('view/backend/adminView.php');
-    }  
     public function deletePost() {
         $manager = new PostManager();
         $manager->delete('posts', $_GET['id']);
@@ -49,27 +45,31 @@ class Backend
         
     }
 
-    public function update($id, $title, $content)
+    public function update($title, $content)
     {
         $manager = new PostManager();
-        $manager->updatePost($title, $content, $id);
-        require('view/backend/updateView.php');
+        $manager->updatePost($title, $content);
+        require(VIEW.'backend/updateView.php');
     }
     
     public function creatPost()
     {
-        require('view/backend/creatView.php');
+        require(VIEW.'backend/creatView.php');
     }
 
     public function setPost($title, $content)
     {
-        $manager = new PostManager();
-        $newPost = $manager->insertPost($title, $content);
-         if ($newPost === false) {
+        $postManager = new PostManager();
+        $createdPost = $postManager->insertPost($title, $content);
+         if ($createdPost === false) {
+            var_dump('erreur depuis le backend');
             throw new Exception('Impossible d\'ajouter l\'article !');
         }
         else {
-            header('Location: index.php?action=listAllPosts');
+            
+            var_dump('post crée');
+            header('Location: index.php?action=connect');
+            exit;
         }
     }
 

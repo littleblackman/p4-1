@@ -1,16 +1,12 @@
 <?php 
 
-require_once 'model/PostManager.php';
-require_once 'model/CommentManager.php';
-
-
 class Frontend{
 
     public function listPosts() 
     {
         $manager = new PostManager();
         $posts = $manager->getPosts();
-        require('view/frontend/listPostsView.php');
+        require(VIEW.'frontend/listPostsView.php');
     }
    
     public function post()
@@ -21,7 +17,7 @@ class Frontend{
             $post = $mode->getPost($_GET['id']);
             $comments = $commentManag->getComments($_GET['id']);
 
-            require('view/frontend/postView.php');
+            require(VIEW.'frontend/postView.php');
         }else{
             echo 'Erreur : aucun identifiant de billet envoyé';
             
@@ -31,7 +27,7 @@ class Frontend{
     public function auteur()
     {
 
-        require('view/frontend/Auteur.php');
+        require(VIEW.'frontend/Auteur.php');
     }
      
      

@@ -8,12 +8,12 @@
     <form action="index.php?action=login" method="post" class="connectAdmin">
     <input type='text' name='username'/>
     <input type='password' name='password'/>
-    <input type="submit"/>
+    <input type="submit" class="btn"/>
     </form>
 </div>
 <?php include (VIEW.'frontend/footer.php'); ?>
 <?php $content = ob_get_clean(); ?>
-<?php require 'view/frontend/template.php'; ?>
+<?php require (VIEW.'frontend/template.php'); ?>
 
  
 

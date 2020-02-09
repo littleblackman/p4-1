@@ -26,7 +26,7 @@ class Autoloader{
 	{
 		if(file_exists(MODEL.$class.'.php'))
 		{
-			include_once ($class.'.php');
+			include_once (MODEL.$class.'.php');
 		}else if(file_exists(VIEW.$class.'.php'))
 		{
 			include_once (VIEW.$class.'.php');

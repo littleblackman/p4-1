@@ -15,29 +15,8 @@
     </p>
 </div>
 
-<h2>Commentaires</h2>
-<?php
-while ($comment = $comments->fetch())
-{
-?>
-   <div class='col-md-12 text-justify text-center comment'>
-        <h3 class='t3'>
-            <?= htmlspecialchars($comment['author']) ?>
-            <em><?= $comment['comment_date_fr'] ?></em>
-        </h3>
-        <p>
-           <?= htmlspecialchars($comment['comment']) ?>
-        </p>
-   </div>
-<?php
-}
-
-?>
-
-
-
-
-<form class="text-center" action="index.php?action=addComment&amp;id=<?= $post['id'] ?>" method="post">
+<h2 class="text-left titre_comment">Commenter l'article</h2>
+<form class="formComment" action="index.php?action=addComment&amp;id=<?= $post['id'] ?>" method="post">
     <div>
         <label for="author">Auteur</label><br />
         <input type="text" id="author" name="author" />
@@ -47,9 +26,30 @@ while ($comment = $comments->fetch())
         <textarea id="comment" name="comment"></textarea>
     </div>
     <div>
-        <input type="submit" class="btn btn-success"/>
+        <input type="submit" class="btn"></button>
     </div>
 </form>
+<?php
+while ($comment = $comments->fetch())
+{
+?>
+   <div class='col-md-12 text-justify comment'>
+        <h3 class='t3'>
+            <?= htmlspecialchars($comment['author']) ?>
+            
+        </h3>
+        <em><?= $comment['comment_date_fr'] ?>
+            </em>
+            <button class="float-right btn-success signaler">Signaler</button>
+        <p class="commentaire">
+           <?= htmlspecialchars($comment['comment']) ?>
+        </p>
+        <hr>
+   </div>
+<?php
+}
+
+?>
 
 <?php $content = ob_get_clean(); ?>
 
