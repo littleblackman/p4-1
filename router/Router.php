@@ -53,11 +53,15 @@ class Routeur{
 					break;
                 
                 case 'edit':
-					$back->edit($_GET['id']);
+                    if (isset($_GET['id']) && $_GET['id'] > 0) 
+                    {
+                    	$back->edit();
+                    }
+					
 					break;
 
 				case 'update':
-				    $back->update($_POST['title'], $_POST['content']);
+				    $back->update($_POST['title'], $_POST['content'], $_GET['id']);
 						var_dump("l'article as bien été modifié");
 					break;
 				case 'delete':

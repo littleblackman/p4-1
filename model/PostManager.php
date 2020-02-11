@@ -28,15 +28,13 @@ class PostManager extends BddManager
         return $post;
     }
    
-    public function updatePost($title, $content)
+    public function updatePost($title, $content, $postId)
     {
 
-        $request = $this->getBdd()->prepare("UPDATE posts SET title = :title, content = :content, date_modification = :date_modification WHERE id = :id");
-        $request->bindValue(':title', $title, PDO::PARAM_STR);
-        $request->bindValue(':content', $content, PDO::PARAM_STR);
-        $request->bindValue(':date_modification', NOW(), PDO::PARAM_INT);
-        $request->execute();
-
+        $request = $this->getBdd()->prepare("UPDATE posts SET title = ?, content = ?, date_modification = NOW() WHERE id = ?");
+        
+        $update = $request->execute(array($title, $content, $postId));
+         return $update;
     }
     public function insertPost($title, $content)
 	{

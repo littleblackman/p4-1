@@ -2,10 +2,10 @@
 <?php include(VIEW.'frontend/menu.php'); ?>
 <div class="modify">
 	<h3>Modifier l'article <?= $post['title']; ?></h3>
-	<form action="index.php?action=update" method="post">
-	    <input type='text' name='title' value="<?php echo $post['title']; ?>"/>
-	    <textarea type='text' name='content'><?php echo $post['content']; ?></textarea>
-	    <input type="submit"/>
+	<form action="index.php?action=update&amp;id=<?= $post['id'] ?>" method="post">
+	    <input type="text" name="title" value="<?= $post['title']; ?>"/>
+	    <textarea type="text" name="content"><?= $post['content']; ?></textarea>
+	    <input type="submit" value="modifier"/>
 	</form>
 </div>
 

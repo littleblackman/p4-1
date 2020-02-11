@@ -52,17 +52,17 @@ class Backend
         
     }
     
-    public function edit($id)
+    public function edit()
     {
         $manager = new PostManager();
         $post = $manager->getPost($_GET['id']);
         require(VIEW.'backend/updateView.php');
 
     }
-    public function update($title, $content)
+    public function update($title, $content, $postId)
     {
         $manager = new PostManager();
-        $upd = $manager->updatePost($title, $content);
+        $update = $manager->updatePost($title, $content, $postId);
         header('Location: index.php?action=adminIndex');
     }
     
