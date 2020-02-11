@@ -1,5 +1,4 @@
 <?php
-//
 
 ini_set('display_errors','on');
 error_reporting(E_ALL);
@@ -39,7 +38,9 @@ class Routeur{
 		            }
 					
 					break;
-
+                case 'adminIndex':
+					$back->adminIndex();
+					break;
 				case 'disconnect':
 					$back->disconnect();
 					break;
@@ -50,15 +51,14 @@ class Routeur{
 				case 'auteur':
 					$front->auteur();
 					break;
+                
+                case 'edit':
+					$back->edit($_GET['id']);
+					break;
 
 				case 'update':
-				    if (isset($_GET['id']) && $_GET['id'] > 0) {
-						$back->update($_POST['titre'], $_POST['contenu']);
-						
-	                }
-	                else{
-	                	echo"erreur";
-	                }
+				    $back->update($_POST['title'], $_POST['content']);
+						var_dump("l'article as bien été modifié");
 					break;
 				case 'delete':
 					$back->deletePost();
@@ -68,12 +68,14 @@ class Routeur{
 					$back->creatPost();
 					break;
 				case 'publishPost':
-					if (!empty($_POST['title']) && !empty($_POST['content'])) {
-					$back->setPost($_POST['title'], $_POST['content']);
-					var_dump("l'article as bien été ajouté");
+				   
+					if (!empty($_POST['title']) && !empty($_POST['content'])) 
+					{
+						$back->setPost($_POST['title'], $_POST['content']);
+						var_dump("l'article as bien été ajouté");
 					
 				    }else {
-				    	var_dump('erreur');
+				    	
 	                    throw new Exception("impossible d'ajouter l'article !");
 	                }
 		       	    

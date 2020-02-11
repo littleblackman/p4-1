@@ -1,7 +1,5 @@
 <?php
 
-//require 'BddManager.php';
-
 /**
  * Post CRUD request
  * Role: faire le lien entre le code et la BDD
@@ -33,20 +31,16 @@ class PostManager extends BddManager
     public function updatePost($title, $content)
     {
 
-        $request = $this->getBdd()->prepare("UPDATE posts SET  
-	        	title = ?, 
-	        	content = ?, 
-	        	date_modification = NOW() 
-            WHERE id = ?");
+        $request = $this->getBdd()->prepare("UPDATE posts SET title = :title, content = :content, date_modification = :date_modification WHERE id = :id");
+        $request->bindValue(':title', $title, PDO::PARAM_STR);
+        $request->bindValue(':content', $content, PDO::PARAM_STR);
+        $request->bindValue(':date_modification', NOW(), PDO::PARAM_INT);
+        $request->execute();
 
-        $request->execute($title, $content, $date_modification);
-        
-        return $request;
     }
     public function insertPost($title, $content)
 	{
-
-        $insert = $this->getBdd()->prepare('INSERT INTO posts(title, content, creation_date) VALUES(?, ?, NOW())');
+        $insert = $this->getBdd()->prepare('INSERT INTO posts(title, content, creation_date, date_modification) VALUES(?, ?, NOW(), NOW())');
         $newPost = $insert->execute(array($title, $content));
         
             return $newPost;

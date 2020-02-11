@@ -6,10 +6,10 @@
     
     <h1 class="titre_admin">Espace administration</h1>
     <button class="ajoutbutton float-right">
-        <a href="index.php?action=creatPost ">ajouter un article</a>
+        <a href="index.php?action=creatPost">ajouter un article</a>
     </button>
     <button class="disconnectbutton float-left">
-        <a href="index.php?action=disconnect ">Déconnecter</a>
+        <a href="index.php?action=disconnect">Déconnecter</a>
     </button>
     <div class="billets text-center">
         <h3 class="text-success text-left t4">Billets du blog </h3>
@@ -26,7 +26,7 @@
 
             <div class="act">
                 <button > 
-                    <a href="index.php?action=update&amp;id=<?= $data['id'] ?>">modifier</a>
+                    <a href="index.php?action=edit&amp;id=<?= $data['id'] ?>">modifier</a>
             
                 </button>
                 <button>

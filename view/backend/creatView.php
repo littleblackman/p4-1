@@ -6,8 +6,8 @@
 	<p>Vous pouvez créer un article en remplissant le formulaire ci-deçus!</p>
 
 
-	  <script src="https://cdn.tiny.cloud/1/36r7arq0jnxbsnzf2bqw6ybr6c6jj21776jivbuqkdyucps8/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-	  <script>tinymce.init({ selector:'textarea' });</script>
+	<script src="https://cdn.tiny.cloud/1/36r7arq0jnxbsnzf2bqw6ybr6c6jj21776jivbuqkdyucps8/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+	<script>tinymce.init({ selector:'textarea' });</script>
 	<form class="form_creer" action="index.php?action=publishPost" method="post">
         <div>
             <label for="title">Titre</label><br />

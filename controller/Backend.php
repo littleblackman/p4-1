@@ -6,7 +6,17 @@ class Backend
     {
         require (VIEW.'backend/adminLoginView.php');
     }
-
+    
+    public function adminIndex()
+    {
+        if(!isset($_SESSION['admin']))
+        {
+            throw new Exception("erreur 403");
+        }
+        $manager = new PostManager();
+        $allPosts = $manager->getAllPosts();
+        require(VIEW.'backend/adminView.php');
+    }
     public function login($username, $password)
     {
 
@@ -17,11 +27,7 @@ class Backend
         {
             
             $_SESSION['admin'] = $_POST['username'];
-            $manager = new PostManager();
-            $allPosts = $manager->getAllPosts();
-        
-        
-            require(VIEW.'backend/adminView.php');
+             header('Location: index.php?action=adminIndex');
         }    
         else
         {
@@ -34,22 +40,30 @@ class Backend
     public function disconnect()
     {
          session_destroy();
-         require (VIEW.'backend/adminLoginView.php');
+         header('Location: index.php');
+
     }
 
     public function deletePost() {
         $manager = new PostManager();
         $manager->delete('posts', $_GET['id']);
-         header('index.php?action=listAllPosts');
+         header('index.php?action=adminIndex');
 
         
     }
+    
+    public function edit($id)
+    {
+        $manager = new PostManager();
+        $post = $manager->getPost($_GET['id']);
+        require(VIEW.'backend/updateView.php');
 
+    }
     public function update($title, $content)
     {
         $manager = new PostManager();
-        $manager->updatePost($title, $content);
-        require(VIEW.'backend/updateView.php');
+        $upd = $manager->updatePost($title, $content);
+        header('Location: index.php?action=adminIndex');
     }
     
     public function creatPost()
@@ -61,14 +75,14 @@ class Backend
     {
         $postManager = new PostManager();
         $createdPost = $postManager->insertPost($title, $content);
-         if ($createdPost === false) {
-            var_dump('erreur depuis le backend');
-            throw new Exception('Impossible d\'ajouter l\'article !');
+         if ($createdPost === true) {
+            var_dump('post crée');
+            header('Location: index.php?action=adminIndex');
         }
         else {
+            var_dump('erreur depuis le backend');
+            throw new Exception('Impossible d\'ajouter l\'article !');
             
-            var_dump('post crée');
-            header('Location: index.php?action=connect');
             exit;
         }
     }

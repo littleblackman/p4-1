@@ -12,6 +12,7 @@ body{
 }
 .btn{
 	background-color: #00ADB5!important;
+	width: 15%!important;
 }
 a{
 	color: #00ADB5!important;
@@ -37,7 +38,8 @@ background-color: #393E46!important;
 	margin-right: 20px;
 }
 .modify{
-	margin-top: 100px;
+	margin-top: 200px;
+	margin-bottom: 50px;
 }
 .bienvenu{
 	margin-left: 20px;
@@ -135,12 +137,21 @@ h1, h2{
 	align-items: stretch; 
 }
 .monBlock{
-	margin: auto;
+	margin-top: 150px;
+	display: flex;
+	flex-direction: column;
 }
 .logo{
 	width: 150px;
 	float: left;
 	margin-top: -50px;
+}
+input, textarea{
+	background-color: #DDD;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px!important;
 }
 .bio img{
 	width: 70%;

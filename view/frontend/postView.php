@@ -2,14 +2,14 @@
 <!--affichage d'un billet et ses commentaires--> 
 <?php $title = htmlspecialchars($post['title']); ?>
 <?php ob_start(); ?>
-<?php include 'header.php' ?>
+<?php include 'menu.php' ?>
         <p><a href="index.php">Retour à la liste des billets</a></p>
 <div class="news col-sm-9 col-sm-push-3  text-justify monBlock">
     <h3>
         <?= htmlspecialchars($post['title']) ?>
-        <em>le <?= $post['creation_date_fr'] ?></em>
+        
     </h3>
-    
+    <em>le <?= $post['creation_date_fr'] ?></em>
     <p>
         <?= nl2br(htmlspecialchars($post['content'])) ?>
     </p>
