@@ -17,7 +17,7 @@ class Autoloader{
 		define('VIEW', ROOT.'view/');
 		define('MODEL', ROOT.'model/');
 		define('ROUTER', ROOT.'router/');
-		define('PUBLIC', ROOT.'public/');
+		define('ISSET', ROOT.'public/');
 		
     		spl_autoload_register(array(__CLASS__, 'autoload'));
 	}
@@ -38,6 +38,7 @@ class Autoloader{
 		{
 			include_once (ROUTER.$class.'.php');
 		}
+		
     	
     }
  

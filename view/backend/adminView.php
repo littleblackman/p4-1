@@ -41,7 +41,55 @@
         <br/>
     </div>
 
+</div></br>
+<div >
+    <h3 class="text-success text-left t4">Liste des commentaires</h3>
+<?php
+while ($comment = $allComments->fetch())
+{
+?>
+   <div class='col-md-12 text-justify'>
+        <h3 class=''>
+            <?= htmlspecialchars($comment['author']) ?>
+            
+        </h3>
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+        <em><?= $comment['comment_date_fr'] ?>
+        </em>
+        <p class="">
+           <?= htmlspecialchars($comment['comment']) ?>
+        </p>
+        <hr>
+   </div>
+<?php
+}
+
+?>
 </div>
+<br/>
+<div>
+    <h3>Commentaires signalés</h3>
+<?php
+while ($flag = $flagComment->fetch())
+{
+?>
+   <div class='col-md-12 text-justify comment'>
+        <h3 class='t3'>
+            <?= htmlspecialchars($flag['author']) ?>
+            
+        </h3>
+        <em><?= $flag['comment_date_fr'] ?>
+            </em>
+        <p>
+           <?= htmlspecialchars($flag['comment']) ?>
+        </p>
+        <button><a href="index.php?action=deleteComment&amp;id=<?= $flag['id'] ?>">suprimer</a> </button>
+        <hr>
+   </div>
+<?php
+}
+
+?>
 <?php include (VIEW.'frontend/footer.php'); ?>
 <?php $content = ob_get_clean(); ?>
 <?php require (VIEW.'frontend/template.php'); ?>

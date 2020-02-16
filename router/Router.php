@@ -44,9 +44,6 @@ class Routeur{
 				case 'disconnect':
 					$back->disconnect();
 					break;
-				case 'post':
-					$front->post();
-					break;
 
 				case 'auteur':
 					$front->auteur();
@@ -59,7 +56,15 @@ class Routeur{
                     }
 					
 					break;
+                
+                case 'post':
+					$front->post();
+					break;
 
+                case 'pagin':
+                
+                	$front->pagin();
+                    break;
 				case 'update':
 				    $back->update($_POST['title'], $_POST['content'], $_GET['id']);
 						var_dump("l'article as bien été modifié");
@@ -67,15 +72,19 @@ class Routeur{
 				case 'delete':
 					$back->deletePost();
 					break;
+                
+                case 'deleteComment':
+					$back->deleteComment();
+					break;
 
 				case 'creatPost':
 					$back->creatPost();
 					break;
-				case 'publishPost':
+				case 'insertPost':
 				   
 					if (!empty($_POST['title']) && !empty($_POST['content'])) 
 					{
-						$back->setPost($_POST['title'], $_POST['content']);
+						$back->insertPost($_POST['title'], $_POST['content']);
 						var_dump("l'article as bien été ajouté");
 					
 				    }else {
@@ -88,7 +97,7 @@ class Routeur{
 		            if (isset($_GET['id']) && $_GET['id'] > 0) {
 		                if (!empty($_POST['author']) && !empty($_POST['comment'])) 
 		                {
-		                    $back->addComment($_GET['id'], $_POST['author'], $_POST['comment']);
+		                    $front->addComment($_GET['id'], $_POST['author'], $_POST['comment'], '0');
 		                }
 		                else {
 		                    throw new Exception('Tous les champs ne sont pas remplis !');
@@ -98,6 +107,9 @@ class Routeur{
 		                throw new Exception('Aucun identifiant de billet envoyé');
 		            }
 		            break;
+		        case 'flagComment':
+					$front->flagComment($_GET['commentId']);
+					break;
 				default:
 					echo "erreur 404";
 			}

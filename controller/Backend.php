@@ -14,7 +14,10 @@ class Backend
             throw new Exception("erreur 403");
         }
         $manager = new PostManager();
+        $commtManag = new CommentManager();
         $allPosts = $manager->getAllPosts();
+        $allComments = $commtManag->getAllComments();
+        $flagComment = $commtManag->getFlagComment();
         require(VIEW.'backend/adminView.php');
     }
     public function login($username, $password)
@@ -47,9 +50,8 @@ class Backend
     public function deletePost() {
         $manager = new PostManager();
         $manager->delete('posts', $_GET['id']);
-         header('index.php?action=adminIndex');
+         header('Location: index.php?action=adminIndex');
 
-        
     }
     
     public function edit()
@@ -71,10 +73,10 @@ class Backend
         require(VIEW.'backend/creatView.php');
     }
 
-    public function setPost($title, $content)
+    public function insertPost($title, $content)
     {
         $postManager = new PostManager();
-        $createdPost = $postManager->insertPost($title, $content);
+        $createdPost = $postManager->creatPost($title, $content);
          if ($createdPost === true) {
             var_dump('post crée');
             header('Location: index.php?action=adminIndex');
@@ -87,25 +89,11 @@ class Backend
         }
     }
 
-    public function addComment($postId, $author, $comment)
-    {
-        $mod = new CommentManager();
-        $affectedLines = $mod->postComment($postId, $author, $comment);
-
-        if ($affectedLines === false) {
-            throw new Exception('Impossible d\'ajouter le commentaire !');
-        }
-        else {
-            header('Location: index.php?action=post&id=' . $postId);
-        }
-
-    }
-
     public function deleteComment(){
-        $manager = PostManager();
+        $manager = new CommentManager();
         $manager->delete('comments', $_GET['id']);
 
-        header('index.php?action=listPosts');
+        header('Location: index.php?action=adminIndex');
          exit();
     }
 }

@@ -38,8 +38,7 @@ background-color: #393E46!important;
 	margin-right: 20px;
 }
 .modify{
-	margin-top: 200px;
-	margin-bottom: 50px;
+	margin: 200px 50px 50px 50px;
 }
 .bienvenu{
 	margin-left: 20px;
@@ -48,8 +47,15 @@ background-color: #393E46!important;
 .titre_admin{
 	margin-top: -50px;
 }
-.ajout button{
+.modify input, .ajout input{
+    margin-top: 15px;
+}
+button .retour{
+	margin-top: -100px!important;
+}
+.modify button, .ajout button{
 	background-color: white!important;
+
 }
 .validation{
 	margin-top: 10px;
@@ -175,6 +181,10 @@ input, textarea{
 }
 .page-footer{
 	background-color: 	#C0C0C0!important;
+}
+.onePost
+{
+	margin-top: 200px;
 }
 
 
