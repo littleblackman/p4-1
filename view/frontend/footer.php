@@ -14,23 +14,10 @@
         <p>Ceci est un site d'étudiant openclassroom.</p>
 
       </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none pb-3">
-
-
-      <!-- Grid column -->
+      
+      <li id = "admin" class="col-4 "><i class="fa fa-lock" aria-hidden="true"></i><a href="index.php?action=connect">Admin</a></li> 
 
     </div>
-    <!-- Grid row -->
 
   </div>
-  <!-- Footer Links -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-right">© 2020 Copyright:
-    <a href="https://openclassrooms.com"> openclassroom</a>
-  </div>
-  <!-- Copyright -->
-
 </footer>

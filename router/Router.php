@@ -20,6 +20,11 @@ class Routeur{
 				case 'connect':
 					$back->connect();
 					break;
+
+				case 'allPosts':
+					$front->allPosts();
+					break;
+
 				case 'login':
 					if(isset($_POST) AND !empty($_POST))
 						{

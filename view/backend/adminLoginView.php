@@ -6,9 +6,9 @@
     <h3>Connection</h3>
     <p>Vous n'êtes pas connecté, veuillez taper le mot de passe</p>
     <form action="index.php?action=login" method="post" class="connectAdmin">
-    <input type='text' name='username'/>
-    <input type='password' name='password'/>
-    <input type="submit" class="btn"/>
+    <input type='text' name='username' placeholder="pseudo"/>
+    <input type='password' placeholder="mot de passe" name='password'/>
+    <input type="submit" class="text-center btn"/>
     </form>
 </div>
 <?php include (VIEW.'frontend/footer.php'); ?>

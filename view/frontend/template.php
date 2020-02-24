@@ -5,8 +5,7 @@
         <title><?= $title ?></title>
         <link href="public/css/pro04.css" rel="stylesheet" />
         <link href="public/css/bootstrap.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+        <link rel = "stylesheet" href= "public/fontawesome/css/font-awesome.css" >
     </head>
         
     <body>

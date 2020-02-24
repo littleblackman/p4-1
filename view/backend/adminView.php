@@ -30,7 +30,7 @@
             
                 </button>
                 <button>
-                    <a href="index.php?action=delete&amp;id=<?= $data['id'] ?>">supprimer</a>
+                    <a href="index.php?action=delete&amp;id=<?= $data['id'] ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
                 </button> 
             </div>
         </div>
@@ -42,7 +42,7 @@
     </div>
 
 </div></br>
-<div >
+<div class="liste">
     <h3 class="text-success text-left t4">Liste des commentaires</h3>
 <?php
 while ($comment = $allComments->fetch())
@@ -53,7 +53,6 @@ while ($comment = $allComments->fetch())
             <?= htmlspecialchars($comment['author']) ?>
             
         </h3>
-        <i class="fa fa-trash-o" aria-hidden="true"></i>
         <em><?= $comment['comment_date_fr'] ?>
         </em>
         <p class="">
@@ -67,29 +66,31 @@ while ($comment = $allComments->fetch())
 ?>
 </div>
 <br/>
-<div>
+<div class="commentflag">
     <h3>Commentaires signalés</h3>
-<?php
-while ($flag = $flagComment->fetch())
-{
-?>
-   <div class='col-md-12 text-justify comment'>
-        <h3 class='t3'>
-            <?= htmlspecialchars($flag['author']) ?>
+    <?php
+    while ($flag = $flagComment->fetch())
+    {
+    ?>
+       <div class='col-md-12 text-justify comment'>
+            <h3 class='t3'>
+                <?= htmlspecialchars($flag['author']) ?>
+                
+            </h3>
+            <em><?= $flag['comment_date_fr'] ?>
+                </em>
+            <p>
+               <?= htmlspecialchars($flag['comment']) ?>
+               <button><a href="index.php?action=deleteComment&amp;id=<?= $flag['id'] ?>"><i class="fa fa-trash" aria-hidden="true"></i></a> </button>
+            </p>
             
-        </h3>
-        <em><?= $flag['comment_date_fr'] ?>
-            </em>
-        <p>
-           <?= htmlspecialchars($flag['comment']) ?>
-        </p>
-        <button><a href="index.php?action=deleteComment&amp;id=<?= $flag['id'] ?>">suprimer</a> </button>
-        <hr>
-   </div>
-<?php
-}
+            <hr>
+       </div>
+    <?php
+    }
 
-?>
+    ?>
+</div>
 <?php include (VIEW.'frontend/footer.php'); ?>
 <?php $content = ob_get_clean(); ?>
 <?php require (VIEW.'frontend/template.php'); ?>

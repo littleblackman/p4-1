@@ -1,19 +1,27 @@
+
 <?php $title = "Billets simple pour l'alaska"; ?>
 <?php ob_start(); ?>
 <?php include 'header.php'; ?>
-<p class="text-center text-success t4">Dérniers billets du blog </p>
-<?php while ($data = $posts->fetch(PDO::FETCH_ASSOC)) :?>
-   <div class="col-md-12  text-justify text-center">
-        <h3 class='t3'>
-            <?= htmlspecialchars($data['title']) ?>
-            <em><?= $data['creation_date_fr'] ?></em>
-        </h3>
-        <p>
-           <em><a href="index.php?action=pagin&amp;id=<?= $data['id'] ?>">Lire l'article</a></em>
-        </p>
-   </div>
-<?php endwhile;?>
-<?php $posts->closeCursor(); ?>
+<h2 class="text-center text-secondary t4">Dérniers Chapitres</h2>
+<div class="listChapitres">
+	
+	<?php while ($data = $posts->fetch(PDO::FETCH_ASSOC)) :?>
+		
+	   <div class="seul">
+	   		<img src="public/images/mt.jpg">
+	        <h3 class='t3'>
+	            <?= htmlspecialchars($data['title']) ?>
+	            
+	        </h3>
+	        <p>
+	        	
+	           <em><a class="cha1  text-light" href="index.php?action=pagin&amp;id=<?= $data['id'] ?>">Lire</a></em>
+	        </p>
+	   </div>
+	<?php endwhile;?>
+	<?php $posts->closeCursor(); ?>
+</div>
+
 <?php include 'footer.php'; ?>
 <?php $content = ob_get_clean(); ?>
 <?php require('template.php'); ?>

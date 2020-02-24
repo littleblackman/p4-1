@@ -12,13 +12,15 @@ class Backend
         if(!isset($_SESSION['admin']))
         {
             throw new Exception("erreur 403");
-        }
-        $manager = new PostManager();
+        }else{
+            $manager = new PostManager();
         $commtManag = new CommentManager();
         $allPosts = $manager->getAllPosts();
         $allComments = $commtManag->getAllComments();
         $flagComment = $commtManag->getFlagComment();
         require(VIEW.'backend/adminView.php');
+        }
+        
     }
     public function login($username, $password)
     {
@@ -48,6 +50,7 @@ class Backend
     }
 
     public function deletePost() {
+
         $manager = new PostManager();
         $manager->delete('posts', $_GET['id']);
          header('Location: index.php?action=adminIndex');
@@ -59,7 +62,7 @@ class Backend
         $manager = new PostManager();
         $post = $manager->getPost($_GET['id']);
         require(VIEW.'backend/updateView.php');
-
+       
     }
     public function update($title, $content, $postId)
     {

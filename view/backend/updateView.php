@@ -2,7 +2,7 @@
 <?php include(VIEW.'frontend/menu.php'); ?>
 <div class="modify">
 	<button class="retour"><a href="index.php?action=adminIndex">page admin</a></button>
-	<h3>Modifier l'article <?= $post['title']; ?></h3>
+	<h3>Modifier le <?= $post['title']; ?></h3>
 	<form action="index.php?action=update&amp;id=<?= $post['id'] ?>" method="post">
 	    <input type="text" name="title" value="<?= $post['title']; ?>"/>
 	    <textarea type="text" name="content"><?= $post['content']; ?></textarea>

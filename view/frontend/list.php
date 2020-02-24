@@ -31,3 +31,13 @@ endif;
         $query->closeCursor();
         ?>
 
+        /*if($direction)
+        { 
+            if($direction == 'prev') $query .= 'id < ?'; 
+         
+            if($direction == 'next') $query .= 'id > ?';
+        }
+        else 
+        {
+            $query .= 'id = ?';
+        }*/

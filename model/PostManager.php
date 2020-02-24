@@ -10,7 +10,7 @@ class PostManager extends BddManager
 
 	public function getPosts()
     {
-        $req = $this->getBdd()->query('SELECT id, title, content, DATE_FORMAT(creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS creation_date_fr FROM posts ORDER BY creation_date DESC LIMIT 0, 5');
+        $req = $this->getBdd()->query('SELECT id, title, content, DATE_FORMAT(creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS creation_date_fr FROM posts ORDER BY creation_date DESC LIMIT 0, 2');
          return $req;
     }
 
@@ -19,17 +19,19 @@ class PostManager extends BddManager
         $request = $this->getBdd()->query('SELECT id, title, content, DATE_FORMAT(creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation_fr FROM posts ORDER BY creation_date DESC');
         return $request;
     }
-    public function pagin($limite, $debut)
+
+    public function allPosts()
     {
-        $query = $this->getBdd()->prepare('SELECT * FROM posts LIMIT :limite OFFSET :debut');
-        $query->bindValue('limite', $limite, PDO::PARAM_INT);
-        $query->bindValue('debut', $debut, PDO::PARAM_INT);
-        $query->execute();
-        return $query;
+        $request = $this->getBdd()->query('SELECT id, title, content, DATE_FORMAT(creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation_fr FROM posts ORDER BY creation_date');
+        return $request;
     }
-    public function getPost($postId)
+    
+    public function getPost($postId, $direction = null)
     {
-        $req = $this->getBdd()->prepare('SELECT id, title, content, DATE_FORMAT(creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS creation_date_fr FROM posts WHERE id = ?');
+        $query = 'SELECT id, title, content, DATE_FORMAT(creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS creation_date_fr FROM posts WHERE id = ?';
+
+       
+        $req = $this->getBdd()->prepare($query);
         $req->execute(array($postId));
         $post = $req->fetch();
 

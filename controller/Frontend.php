@@ -4,48 +4,51 @@ class Frontend{
     //public $limite = 10;
     public function listPosts() 
     {
+
         $manager = new PostManager();
         $posts = $manager->getPosts();
         require(VIEW.'frontend/listPostsView.php');
     }
+    
+    public function allPosts()
+    {
+        
+            $ma = new PostManager();
+            $allPosts = $ma->allPosts();
+        $all = $allPosts;
+
+        require(VIEW.'frontend/AllPosts.php');
+        
+    }
    
    public function pagin()
-   {
-     //if (isset($_GET['id']) && $_GET['id'] > 0) {
-          $commentManag = new CommentManager();
-          $manager = new PostManager();
-            //$post = $manager->getPost($_GET['page']);
-            $comments = $commentManag->getComments($_GET['id']);
-            $page = (!empty($_GET['page']) ? $_GET['page'] : 1);
-        $limite = 1;
-        $debut = ($page - 1) * $limite;
-        
-        $query = $manager->pagin($limite, $debut);
-        $resultFoundRows = $manager->getAllPosts();
-        $nombredElementsTotal = $resultFoundRows->fetchColumn();
-        $nombreDePages = ceil($nombredElementsTotal / $limite);
-
-
-            require(VIEW.'frontend/postView.php');
-        /*}else{
-            echo 'Erreur : aucun identifiant de billet envoyé';
-            
-       }*/
-   }
-    public function post()
-    {
-        if (isset($_GET['id']) && $_GET['id'] > 0) {
+   {    if (isset($_GET['id']) && $_GET['id'] > 0) {
             $manager = new PostManager();
-          $commentManag = new CommentManager();
-            $post = $manager->getPost($_GET['id']);
-            $comments = $commentManag->getComments($_GET['id']);
+            $posts = $manager->getAllPosts()->fetchAll();
+            $posts = array_reverse($posts);
+            $po = count($posts);
 
-            //require(VIEW.'frontend/postView.php');
+            $commentManag = new CommentManager();
+        
+        if (isset($_GET['direction']))
+        {
+            $direction = $_GET['direction'];
+        }else
+        {
+            $direction = null; 
+        } 
+
+        $post = $manager->getPost($_GET['id'], $direction);
+
+        $comments = $commentManag->getComments($_GET['id']);
+        
+        require(VIEW.'frontend/postView.php');
         }else{
             echo 'Erreur : aucun identifiant de billet envoyé';
             
        }
-    }
+   }
+
     
     public function addComment($postId, $author, $comment, $flag)
     {
@@ -56,7 +59,7 @@ class Frontend{
             throw new Exception('Impossible d\'ajouter le commentaire !');
         }
         else {
-            header('Location: index.php?action=pagin&page='. $postId);
+            header('Location: index.php?action=pagin&id='. $postId);
         }
 
     }
@@ -65,7 +68,7 @@ class Frontend{
 
         $commentManager = new CommentManager();
         $flag = $commentManager->flagComment($commentId);
-        header("Location: index.php?action=pagin&page=" . $postId);
+        header("Location: index.php?action=pagin&id=" .$post);
 
     }
     public function auteur()
