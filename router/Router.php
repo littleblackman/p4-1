@@ -39,7 +39,7 @@ class Routeur{
 						}
 				    else
 				    {
-                    	echo "Vous n'éte pas autoriser c'est l'espace reservé à l'admin du site";
+                    	echo "Vous n'etes pas autorisé c'est l'espace réservé à l'admin du site";
 		            }
 					
 					break;
@@ -85,8 +85,7 @@ class Routeur{
 				case 'creatPost':
 					$back->creatPost();
 					break;
-				case 'insertPost':
-				   
+				case 'insertPost':   
 					if (!empty($_POST['title']) && !empty($_POST['content'])) 
 					{
 						$back->insertPost($_POST['title'], $_POST['content']);
@@ -112,8 +111,12 @@ class Routeur{
 		                throw new Exception('Aucun identifiant de billet envoyé');
 		            }
 		            break;
-		        case 'flagComment':
+		        case 'flagComment': 
 					$front->flagComment($_GET['commentId']);
+
+					break;
+				case 'annulflag':
+					$back->annulflag($_GET['commentId']);
 					break;
 				default:
 					echo "erreur 404";

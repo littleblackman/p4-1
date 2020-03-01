@@ -14,9 +14,11 @@
         <p>Ceci est un site d'étudiant openclassroom.</p>
 
       </div>
-      
-      <li id = "admin" class="col-4 "><i class="fa fa-lock" aria-hidden="true"></i><a href="index.php?action=connect">Admin</a></li> 
-
+      <?php if(!isset($_SESSION['admin'])) : ?>
+        <h5 id = "admin" class="col-4 "><a href="index.php?action=connect"><i class="fa fa-lock" aria-hidden="true"></i>Connection</a></h5> 
+      <?php else: ?>
+        <h5 id = "adminIndex" class="col-4 "><a href="index.php?action=adminIndex"><i class="fa fa-unlock" aria-hidden="true"></i>Admin</a></h5> 
+      <?php endif ?>
     </div>
 
   </div>

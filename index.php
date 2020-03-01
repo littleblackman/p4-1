@@ -6,4 +6,3 @@
  require_once(ROUTER.'Router.php');
 $routeur = new Routeur();
 $routeur->route();
-

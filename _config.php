@@ -1,12 +1,10 @@
 <?php
-ini_set('display_errors', 'on');
-error_reporting(E_ALL);
-
-
 class Autoloader{
 	public static function register()
 	{
-		
+		ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
 		$root = $_SERVER['DOCUMENT_ROOT'];
 		$host = $_SERVER['HTTP_HOST'];
 
@@ -19,7 +17,7 @@ class Autoloader{
 		define('ROUTER', ROOT.'router/');
 		define('ISSET', ROOT.'public/');
 		
-    		spl_autoload_register(array(__CLASS__, 'autoload'));
+		spl_autoload_register(array(__CLASS__, 'autoload'));
 	}
 	
 	public static function autoload($class)

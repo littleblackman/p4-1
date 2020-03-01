@@ -2,7 +2,7 @@
 <?php $title = "Billets simple pour l'alaska"; ?>
 <?php ob_start(); ?>
 <?php include 'header.php'; ?>
-<h2 class="text-center text-secondary t4">Dérniers Chapitres</h2>
+<h2 class="text-center text-black-50">Derniers Chapitres</h2>
 <div class="listChapitres">
 	
 	<?php while ($data = $posts->fetch(PDO::FETCH_ASSOC)) :?>

@@ -2,9 +2,9 @@
 <?php include(VIEW.'frontend/menu.php'); ?>
 <div class="espace_admin">
 
-    <h2 class="text-success text-left bienvenu">Bienvenue <?= $_SESSION['admin'] ?></h2>
+    <h2 class="text-dark text-left bienvenu">Bienvenue <?= $_SESSION['admin'] ?></h2>
     
-    <h1 class="titre_admin">Espace administration</h1>
+    <h1 class="titre_admin text-dark">Espace administration</h1>
     <button class="ajoutbutton float-right">
         <a href="index.php?action=creatPost">ajouter un article</a>
     </button>
@@ -12,59 +12,52 @@
         <a href="index.php?action=disconnect">Déconnecter</a>
     </button>
     <div class="billets text-center">
-        <h3 class="text-success text-left t4">Billets du blog </h3>
-         
-        <?php
-        while ($data = $allPosts->fetch())
-        {
-        ?>
-        <div class="text-left news">
-            <h3>
-                <?php echo htmlspecialchars($data['title']); ?>               
-                
-            </h3>
-
-            <div class="act">
-                <button > 
-                    <a href="index.php?action=edit&amp;id=<?= $data['id'] ?>">modifier</a>
-            
-                </button>
-                <button>
-                    <a href="index.php?action=delete&amp;id=<?= $data['id'] ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                </button> 
-            </div>
-        </div>
-        <?php
-        } // Fin de la boucle des billets
-        $allPosts->closeCursor();
-        ?>
-        <br/>
+        <h3 class="text-left">Billets du blog </h3> 
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Chapitres</th>
+                        <th>Date</th>
+                        <th>Modifier</th>
+                        <th>Supprimer</th> 
+                    </tr>
+                </thead> <tbody>
+                <?php
+                while ($data = $allPosts->fetch())
+                {
+                ?>
+                    <tr>
+                        <td>
+                          <?php echo htmlspecialchars($data['title']); ?>
+                        </td>
+                        <td>  
+                           Crée le: <?php echo htmlspecialchars($data['date_creation_fr']); ?><br/> 
+                           modifié le: <?php echo htmlspecialchars($data['date_modif_fr']); ?> 
+                        </td>
+                                       
+                        <td>
+                            <button>
+                                <a href="index.php?action=edit&id=<?= $data['id'] ?>">modifier</a>
+                            </button>
+                        </td>
+                        <td> 
+                           <button>
+                                <a href="index.php?action=delete&id=<?= $data['id'] ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            </button>  
+                        </td>
+                    </tr>
+  
+                </tbody>
+            <?php
+            } // Fin de la boucle des billets
+            $allPosts->closeCursor();
+            ?>
+        </table>
+            <br/>
     </div>
 
 </div></br>
-<div class="liste">
-    <h3 class="text-success text-left t4">Liste des commentaires</h3>
-<?php
-while ($comment = $allComments->fetch())
-{
-?>
-   <div class='col-md-12 text-justify'>
-        <h3 class=''>
-            <?= htmlspecialchars($comment['author']) ?>
-            
-        </h3>
-        <em><?= $comment['comment_date_fr'] ?>
-        </em>
-        <p class="">
-           <?= htmlspecialchars($comment['comment']) ?>
-        </p>
-        <hr>
-   </div>
-<?php
-}
 
-?>
-</div>
 <br/>
 <div class="commentflag">
     <h3>Commentaires signalés</h3>
@@ -81,7 +74,8 @@ while ($comment = $allComments->fetch())
                 </em>
             <p>
                <?= htmlspecialchars($flag['comment']) ?>
-               <button><a href="index.php?action=deleteComment&amp;id=<?= $flag['id'] ?>"><i class="fa fa-trash" aria-hidden="true"></i></a> </button>
+               <button><a href="index.php?action=deleteComment&id=<?= $flag['id'] ?>"><i class="fa fa-trash" aria-hidden="true"></i></a> </button>
+               <button><a href="index.php?action=annulflag&commentId=<?= $flag['id']; ?>"><i class="fa fa-times-circle-o" aria-hidden="true"></i></a> </button>
             </p>
             
             <hr>

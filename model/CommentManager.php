@@ -39,5 +39,11 @@ class CommentManager extends BddManager
         $req->execute(array($commentId));
         var_dump($req->errorInfo(), $req->rowCount());
     }
+    public function annulflag($commentId)
+    {
+        $req = $this->getBdd()->prepare('UPDATE comments SET flag = "0" WHERE id = ?');
+        $req->execute(array($commentId));
+        var_dump($req->errorInfo(), $req->rowCount());
+    }
     
 }

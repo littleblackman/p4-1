@@ -12,23 +12,12 @@ form input:focus
 {
 	border: 2px solid white;
 }
-input:not(:focus):invalid {
-    background: $cd-danger;
-    border: 2px solid $cd-danger;
-    color: $cd-txt--invalid;
-}
 
 .comment{
-   /*border: 1px solid */
    margin: auto;
    text-align: center;
    padding: 10px;
 
-}
-
-a{
-	color: white!important;
-	font-weight: bold;
 }
 .act{
 	
@@ -41,6 +30,8 @@ a{
     margin: auto;
     text-align: center;
     margin-bottom: 100px!important;
+    box-shadow: 10px 10px 10px black;
+    border: 2px solid gray;
 }
 .liste{
 	   width: 60%;
@@ -48,7 +39,7 @@ a{
     text-align: center;
     background: url('../images/ice1.jpg');
 }
-/*.paginNum */a{
+a{
 	font-size: 1.2em;
 	color: gray!important;
 	background-color: white;
@@ -114,11 +105,6 @@ button .retour{
 	margin-top: 10px;
 }
 
-.paginNum
-{
-	margin-top: 10px!important;
-	
-}
 .admin{
 	margin: 200px;
 }
@@ -171,6 +157,7 @@ h1, h2{
 
 }
 .t4{
+	margin-top: 200px;
 	margin-bottom: 60px;
 	margin-left: 20px;
 	font-size: 30px!important;
@@ -199,17 +186,22 @@ h1, h2{
 }
 .billets{
 	margin-top: 100px;
+	
 }
-.news{
-	padding: 10px;
-	text-align: center;
-	margin: auto;
-	align-items: column; 
-	width: 90%;
-	border-radius: 10px;
+.billets table{
 	background: url('../images/ice1.jpg');
+    width: 85%!important;
+    margin: auto;
+    text-align: center;
+	width: 90%!important;
+	padding: 20px!important;
+	  box-shadow: 10px 10px 10px black;
 }
-
+.billets table tr
+{
+	/*border: 2px double gray;*/
+	box-shadow: 10px 10px 10px black;
+}
 .commentdiv{
 	background: url('../images/ice1.jpg');
 	width: 90%;
@@ -256,13 +248,18 @@ h1, h2{
 }
 .chapitres
 {
+	box-shadow: 10px 10px 10px black;
 	border: 2px solid gray;
 	width: 80%;
 	text-align: center;
 	margin: auto;
 	background: url('../images/ice1.jpg'); 
-	margin-top: 200px;
-
+	margin-top: 50px;
+   margin-bottom: 100px;
+}
+.chapitre{
+	box-shadow: 10px 10px 10px black;
+	padding: 10px;
 }
 .chapitres a, .chapitres h2
 {
@@ -309,13 +306,15 @@ input, textarea{
 .paginNum{
 	margin: auto;
 	text-align: center!important;
+	margin-top: 20px!important;
 }
 .paginNum a
 {
-	border: 1px solid gray;
-	margin: 2px;
-	height: 10px:
+	border: 1px solid #C0C0C0;
+	margin: 1px;
+	height: 10px!important:
 	width: 10px!important;
+	background-color: #C0C0C0;
 }
 .paginNum a i
 {
@@ -345,8 +344,24 @@ input, textarea{
 	margin: 50px;
 	width: 300px!important;
 }
-.onePost
+.news{
+	background: url('../images/ice1.jpg');
+	box-shadow: 10px 10px 10px black;
+	border: 2px solid gray;
+	width: 80%;
+	text-align: center;
+	margin: auto;
+	padding: 50px;
+}
+.onePost h2
 {
+	margin-bottom: 50px!important;
+	text-align: center;
+	margin: auto;
+}
+.onePost
+{   
+	
 	margin-top: 200px;
 }
 

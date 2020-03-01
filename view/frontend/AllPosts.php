@@ -2,9 +2,10 @@
 <?php $title = "Billets simple pour l'alaska"; ?>
 <?php ob_start(); ?>
 <?php include 'menu.php'; ?>
-<div class="chapitres bg-secodary">
-    <h2 class="text-center text-light t4">Les Chapitres du livre</h2>
-
+<h2 class="text-center text-dark t4">Les Chapitres du livre</h2>
+<div class="chapitres bg-secondary">
+    
+    
     <?php while ($data = $allPosts->fetch(PDO::FETCH_ASSOC)) : 
         $debut = substr($data['content'], 0, 400);
         $debut = substr($debut, 0, strrpos($debut, ' ')) . '...';

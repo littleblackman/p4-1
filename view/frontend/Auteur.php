@@ -18,7 +18,7 @@
             Les lecteurs qui l’ont rencontré ont été touchés par sa simplicité et sa qualité d’écoute malgré les files d’attentes de plus en plus longues lors des séances de dédicaces. Il sait offrir un moment particulier à chacun.
 
             Il se marie avec l’animatrice Faustine Bollaert en août 2012 et il est maintenant papa.
-                    </p>
+        </p>
  </div>       
 <?php include 'footer.php'; ?>
 <?php $content = ob_get_clean(); ?>

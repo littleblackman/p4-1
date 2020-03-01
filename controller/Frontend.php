@@ -1,4 +1,5 @@
 <?php 
+require_once('Session.php');
 
 class Frontend{
     //public $limite = 10;
@@ -14,7 +15,7 @@ class Frontend{
     {
         
             $ma = new PostManager();
-            $allPosts = $ma->allPosts();
+            $allPosts = $ma->getAllPosts();
         $all = $allPosts;
 
         require(VIEW.'frontend/AllPosts.php');
@@ -25,7 +26,6 @@ class Frontend{
    {    if (isset($_GET['id']) && $_GET['id'] > 0) {
             $manager = new PostManager();
             $posts = $manager->getAllPosts()->fetchAll();
-            $posts = array_reverse($posts);
             $po = count($posts);
 
             $commentManag = new CommentManager();
@@ -68,7 +68,10 @@ class Frontend{
 
         $commentManager = new CommentManager();
         $flag = $commentManager->flagComment($commentId);
-        header("Location: index.php?action=pagin&id=" .$post);
+       $session = new Session(); 
+       $session->flash();
+        $session->setFlash('Le commentaire est signalé');
+        header("Location: index.php?action=pagin&id=" .$_GET['postId']);
 
     }
     public function auteur()
