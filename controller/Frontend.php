@@ -1,7 +1,7 @@
 <?php 
 require_once('Session.php');
 
-class Frontend{
+class Frontend extends Controller {
     //public $limite = 10;
     public function listPosts() 
     {
@@ -68,9 +68,7 @@ class Frontend{
 
         $commentManager = new CommentManager();
         $flag = $commentManager->flagComment($commentId);
-       $session = new Session(); 
-       $session->flash();
-        $session->setFlash('Le commentaire est signalé');
+        $this->session->setFlash('Le commentaire est signalé');
         header("Location: index.php?action=pagin&id=" .$_GET['postId']);
 
     }
