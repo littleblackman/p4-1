@@ -13,17 +13,14 @@ class Session
 	{
 		$_SESSION['flash'] = $message;
 	}
-	public function flash()
+	public function getFlash()
 	{
+		$message = null;
 		if(isset($_SESSION['flash']))
-		{ ?>
-			<div class="alert">
-				<a class="close">x</a>
-				<?php echo $_SESSION['flash']; ?>
-			</div>
-			
-			<?php
+		{ 	
+			$message = $_SESSION['flash'];
 			unset($_SESSION['flash']);
 		}
+		return $message;
 	}
 }
